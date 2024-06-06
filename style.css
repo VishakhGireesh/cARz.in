@@ -7,20 +7,22 @@
 }
 
 ::-webkit-scrollbar {
-    width:0px;
+    width: 0px;
     background: none;
 }
-::-webkit-scrollbar-button{
-width:0px;
-background:none;
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    background: none;
 }
+
 ::-webkit-scrollbar-track {
-    background:none;
+    background: none;
     ;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: none ;
+    background: none;
     width: 0px;
 }
 
@@ -30,12 +32,12 @@ p::selection {
 
 body {
     width: 100%;
-    min-height: 100vh;
-    background-image: url(2022-Volkswagen-T-Roc-R-001-1440w.jpg);
+    height: 120vh;
+    background-image: url(home.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition-behavior;
+    transition: 1s ease-in;
 }
 
 .header {
@@ -54,10 +56,11 @@ body {
 }
 
 .header::before,
-aside::before {
+aside::before,footer::before {
     content: '';
-    position:absolute;
+    position: absolute;
     top: 0;
+    bottom: 0;
     left: -100%;
     width: 100%;
     height: 100%;
@@ -66,13 +69,18 @@ aside::before {
 }
 
 .header:hover::before,
-aside:hover::before {
+aside:hover::before, footer:hover::before {
     left: 100%;
 
 }
+
 aside::before {
-    height: 100vh;
+    height: 120vh;
 }
+footer::before {
+    height:100%;
+}
+
 .logo {
     margin-left: -30px;
     color: #fff;
@@ -102,8 +110,10 @@ aside::before {
 }
 
 .cars {
+    transition: all ease-in 0.6s;
     position: fixed;
-    color: #f6f8fc;
+    color: rgba(231, 230, 234, 0.6);
+    text-shadow: 0 0 10px black, 0 0 10px black;
     position: absolute;
     top: 65%;
     left: 21%;
@@ -114,23 +124,23 @@ aside::before {
 }
 
 .cars span {
-    color: rgba(197, 184, 184, 0.663);
-    text-shadow: 0 0 10px black;
+
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px black, 0 0 10px black;
 }
 
 /* ---------------side navbar-------------- */
 
 
 .side-navbar {
-    position: relative;
     display: flex;
     width: 20px;
-    border-radius: 10px;
-    padding: 20px 30px;
+    padding: 20px 18px;
 
 }
 
 .side-navbar img {
+    position: fixed;
     z-index: 3;
     width: 30px;
     filter: invert(99%) sepia(0%) saturate(122%) hue-rotate(192deg) brightness(113%) contrast(100%);
@@ -155,7 +165,7 @@ aside::before {
 
 /* ------------------carbar------------------ */
 aside {
-
+    position: fixed;
     height: 34rem;
     overflow: hidden;
     overflow-y: scroll;
@@ -171,6 +181,7 @@ aside {
     border-right: 1px solid rgba(255, 255, 255, 0.484);
     border-bottom: 1px solid rgba(255, 255, 255, 0.484);
     scroll-behavior: smooth 1s;
+    z-index: 1;
 
 
 }
@@ -178,7 +189,7 @@ aside {
 ul {
     position: relative;
     list-style: none;
-    padding: 0 20px;
+    padding: 0px px;
 
 }
 
@@ -222,3 +233,20 @@ ul li p {
 .rotation {
     animation: mymove 0.6s linear;
 }
+
+p {
+    cursor: default;
+}
+footer{
+    top: 120vh;
+    background-color: black;
+    position: absolute;
+    height: 15%;
+    width: 100%;
+}
+footer p{
+text-align: center;
+    font-size: 16px;
+    color: #ffffff62;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:30px;}
