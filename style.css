@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    width:0px;
+    background: none;
+}
+::-webkit-scrollbar-button{
+width:0px;
+background:none;
+}
+::-webkit-scrollbar-track {
+    background:none;
+    ;
+}
+
+::-webkit-scrollbar-thumb {
+    background: none ;
+    width: 0px;
+}
+
+p::selection {
+    background-color: red;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(2022-Volkswagen-T-Roc-R-001-1440w.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-behavior;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 20px 100px;
+    background: rgb(1, 1, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+}
+
+.header::before,
+aside::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(57, 8, 204, 0.663), transparent);
+    transition: ease-in-out 1s;
+}
+
+.header:hover::before,
+aside:hover::before {
+    left: 100%;
+
+}
+aside::before {
+    height: 100vh;
+}
+.logo {
+    margin-left: -30px;
+    color: #fff;
+    font-size: 45px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    z-index: 3;
+}
+
+.header .logo:hover {
+    color: rgb(12, 67, 247);
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .6s;
+    font-weight: 600;
+    z-index: 3;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+.cars {
+    position: fixed;
+    color: #f6f8fc;
+    position: absolute;
+    top: 65%;
+    left: 21%;
+    font-size: 150px;
+    line-height: 100px;
+    letter-spacing: 2px;
+
+}
+
+.cars span {
+    color: rgba(197, 184, 184, 0.663);
+    text-shadow: 0 0 10px black;
+}
+
+/* ---------------side navbar-------------- */
+
+
+.side-navbar {
+    position: relative;
+    display: flex;
+    width: 20px;
+    border-radius: 10px;
+    padding: 20px 30px;
+
+}
+
+.side-navbar img {
+    z-index: 3;
+    width: 30px;
+    filter: invert(99%) sepia(0%) saturate(122%) hue-rotate(192deg) brightness(113%) contrast(100%);
+}
+
+.side-navbar img:hover {
+    filter: invert(14%) sepia(86%) saturate(5123%) hue-rotate(227deg) brightness(92%) contrast(89%);
+
+
+}
+
+@keyframes mymove {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+
+/* ------------------carbar------------------ */
+aside {
+
+    height: 34rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: none;
+    background: rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+    width: 250px;
+    top: 20;
+    left: 0;
+    margin: 95px 30px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.484);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.484);
+    scroll-behavior: smooth 1s;
+
+
+}
+
+ul {
+    position: relative;
+    list-style: none;
+    padding: 0 20px;
+
+}
+
+ul li {
+
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    color: aliceblue;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 2px;
+    border-bottom-width: 0.6px;
+    padding-bottom: 10px;
+
+
+}
+
+ul li :hover {
+    color: red;
+    font-weight: 700;
+    transition: 0.2s ease-out;
+    width: 60px;
+}
+
+ul li img {
+    width: 35px;
+    margin-right: 10px;
+
+}
+
+ul li p {
+    white-space: nowrap;
+}
+
+.hidden {
+    display: block;
+}
+
+.rotation {
+    animation: mymove 0.6s linear;
+}
