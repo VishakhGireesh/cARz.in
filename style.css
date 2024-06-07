@@ -32,12 +32,15 @@ p::selection {
 
 body {
     width: 100%;
-    height: 120vh;
+    height: 110vh;
     background-image: url(home.jpg);
-    background-size: cover;
+    background-size:cover;
+    object-position: left;
     background-position: center;
     background-repeat: no-repeat;
     transition: 1s ease-in;
+    overflow:hidden;
+    
 }
 
 .header {
@@ -79,6 +82,7 @@ aside::before {
 }
 footer::before {
     height:100%;
+    width: 120%;
 }
 
 .logo {
@@ -238,11 +242,12 @@ p {
     cursor: default;
 }
 footer{
-    top: 120vh;
+    top: 110vh;
     background-color: black;
     position: absolute;
-    height: 15%;
-    width: 100%;
+    height: 16%x;
+    width:100%;
+    padding: auto;
 }
 footer p{
 text-align: center;
@@ -250,3 +255,7 @@ text-align: center;
     color: #ffffff62;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding:30px;}
+    @media only screen {
+        min-width: ;
+        
+    }
